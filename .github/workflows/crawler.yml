@@ -32,10 +32,11 @@ on:
     # 📝 Change time: Only modify the first number (0-59) = minute of each hour
     #
     # 示例 / Examples:
-    #   "15 * * * *"     → 每小时第15分钟 / minute 15 every hour
-    #   "30 0-14 * * *"  → 北京时间 8:00-22:00 每小时第30分钟 / Beijing 8am-10pm
+    #   "15 * * * *"     → 每小时第 15 分钟 / minute 15 every hour
+    #   "30 0-14 * * *"  → 北京时间 8:00-22:00 每小时第 30 分钟 / Beijing 8am-10pm
+    #   "0 0,4,10,14 * * *" → 北京时间 8:00/12:00/18:00/22:00 / Beijing 8am/12pm/6pm/10pm
     #
-    - cron: "0 0-14 * * *"
+    - cron: "0 0,4,10,14 * * *"
 
   workflow_dispatch:
 
